@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace POETask2
 {
-    class Goblin : Enemy
+    class Mage : Enemy
     {
-        public Goblin(int i, int j, TileType ConstructType, char Symbol, int ConstructEnemyDamage, int ConstructHp) : base(i, j, ConstructType, 'G', 1, 10, 10)
+        public Mage(int i, int j, TileType ConstructType, char Symbol, int ConstructEnemyDamage, int ConstructHp) : base(i, j, ConstructType, 'M', 5, 5, 5)
         {
 
         }
 
-        public override MovementEnum ReturnMove(MovementEnum GoblinMoves)
+        public override MovementEnum ReturnMove(MovementEnum MageMoves)
         {
             bool ValidMove = false;
             int move = 0;
@@ -26,7 +26,7 @@ namespace POETask2
 
                 if ((characterVision[move].ToString() != "Wall") & (characterVision[move].ToString() != "Hero"))
                 {
-                    ValidMove = true;
+                    ValidMove = false;
                 }
             }
             return (MovementEnum)move;
@@ -34,7 +34,7 @@ namespace POETask2
 
         public override String ToString()
         {
-            return "Goblin" + " at [" + x.ToString() + y.ToString() + "]" + Damage;
+            return "Mage" + " at [" + x.ToString() + y.ToString() + "]" + Damage;
         }
     }
 }

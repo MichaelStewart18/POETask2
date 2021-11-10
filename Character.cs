@@ -46,9 +46,6 @@ namespace POETask2
         protected Character(int x, int y, TileType ConstructType, char ConstructSymbol) : base(x, y, ConstructType, ConstructSymbol)
         {
             ConstructSymbol = Symbol;
-            Hp = hp;
-            MaxHp = maxhp;
-            Damage = damage;
         }
 
 
@@ -73,15 +70,12 @@ namespace POETask2
 
         private int DistanceTo(Character target)    //Determines the absolute distance between the character and the target
         {
-            return Math.Abs(x - target.x) + Math.Abs(y - target.y);
+            return 5;
         }
 
         public void Move(MovementEnum move)  //Edites a units X and Y valaues in order to move it
         {
-            switch (move)
-            {
-                
-            }
+
         }
 
         public abstract MovementEnum ReturnMove(MovementEnum move = 0);  //Returns a direction of movement

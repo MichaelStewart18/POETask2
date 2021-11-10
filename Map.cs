@@ -66,6 +66,7 @@ namespace POETask2
             }
 
             return new Hero(positionX, positionY, Tile.TileType.Hero, 'H', 20, 20);
+
         }
 
         private void MakeMap()

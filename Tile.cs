@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POETask2
 {
-    abstract class Tile
+    public abstract class Tile
     {
         private char symbol;
         protected int x;

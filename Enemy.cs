@@ -28,11 +28,7 @@ namespace POETask2
 
         public override String ToString()
         {
-            String Info = GetType().Name + "\n";
-            Info += "at [" + x.ToString() + ";" + y.ToString() + "] \n";
-            Info += Hp.ToString() + " HP \n";
-            Info += "{" + Damage.ToString() + "}";
-            return Info;
+            return "EnemyClassName" + " at [" + x.ToString() + y.ToString() + "]" + Damage;
         }
 
     }

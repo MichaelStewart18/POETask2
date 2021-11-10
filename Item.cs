@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace POETask2
 {
-    abstract class Item : Tile
+    public abstract class Item : Tile
     {
+        protected char Symbol;
+        int itemType;
 
-        public override String ToString()
+        protected Item(int x, int y, TileType ConstructType, char ConstructSymbol) : base(x, y, ConstructType, ConstructSymbol)
         {
-            return ;
+            ConstructSymbol = Symbol;
+        }
+
+        public override string ToString()
+        {
+            return itemType.ToString();
         }
     }
 }

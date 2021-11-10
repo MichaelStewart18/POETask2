@@ -12,6 +12,7 @@ namespace POETask2
         private static readonly char Empty = '.';
         private static readonly char Goblin = 'G';
         private static readonly char Obstacle = 'X';
+        private static readonly char Gold = '@';
 
         private Map map;
 
@@ -44,16 +45,6 @@ namespace POETask2
             }
 
             return text;
-        }
-
-        public void Save()
-        {
-
-        }
-
-        public void Load()
-        {
-
         }
     }
 }

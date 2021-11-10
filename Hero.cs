@@ -49,11 +49,7 @@ namespace POETask2
 
         public override String ToString()
         {
-            String Info = "Player Stats: \n";
-            Info += "HP: " + Hp.ToString() + "/" + MaxHp.ToString() + "\n";
-            Info += "Damage: " + Damage.ToString() + "\n";
-            Info += "[" + x.ToString() + ", " + y.ToString() + "]";
-            return Info;
-        }                   
+            return "Hero" + " at [" + x.ToString() + y.ToString() + "]" + Damage;
+        }
     }
 }

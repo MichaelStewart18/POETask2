@@ -39,7 +39,7 @@ namespace POETask2
             {
                 for (int y = 0; y < map.borderHeight; y++)
                 {
-                    text += map.map[x, y].getSymbol();
+                    text += Map.map[x, y].getSymbol();
                 }
                 text += "\n";
             }

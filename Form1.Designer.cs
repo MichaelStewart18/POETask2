@@ -30,6 +30,12 @@ namespace POETask2
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.goldAmount_Label = new System.Windows.Forms.Label();
+            this.weaponDuribility_Label = new System.Windows.Forms.Label();
+            this.damage_Label = new System.Windows.Forms.Label();
+            this.range_Label = new System.Windows.Forms.Label();
+            this.playerWeapon_Label = new System.Windows.Forms.Label();
+            this.playerHP_Label = new System.Windows.Forms.Label();
             this.Gold_Label = new System.Windows.Forms.Label();
             this.Durability_Label = new System.Windows.Forms.Label();
             this.WeaponDamage_Label = new System.Windows.Forms.Label();
@@ -41,18 +47,13 @@ namespace POETask2
             this.btnRight = new System.Windows.Forms.Button();
             this.btnLeft = new System.Windows.Forms.Button();
             this.btnUp = new System.Windows.Forms.Button();
-            this.playerHP_Label = new System.Windows.Forms.Label();
-            this.playerWeapon_Label = new System.Windows.Forms.Label();
-            this.range_Label = new System.Windows.Forms.Label();
-            this.damage_Label = new System.Windows.Forms.Label();
-            this.weaponDuribility_Label = new System.Windows.Forms.Label();
-            this.goldAmount_Label = new System.Windows.Forms.Label();
             this.attackUp_Btn = new System.Windows.Forms.Button();
             this.attackLeft_Btn = new System.Windows.Forms.Button();
             this.attackRight_Btn = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.attackLog_RTB = new System.Windows.Forms.RichTextBox();
+            this.attackDown_Btn = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -79,6 +80,66 @@ namespace POETask2
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Stats";
+            // 
+            // goldAmount_Label
+            // 
+            this.goldAmount_Label.AutoSize = true;
+            this.goldAmount_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goldAmount_Label.Location = new System.Drawing.Point(138, 176);
+            this.goldAmount_Label.Name = "goldAmount_Label";
+            this.goldAmount_Label.Size = new System.Drawing.Size(15, 15);
+            this.goldAmount_Label.TabIndex = 11;
+            this.goldAmount_Label.Text = "0";
+            // 
+            // weaponDuribility_Label
+            // 
+            this.weaponDuribility_Label.AutoSize = true;
+            this.weaponDuribility_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.weaponDuribility_Label.Location = new System.Drawing.Point(138, 142);
+            this.weaponDuribility_Label.Name = "weaponDuribility_Label";
+            this.weaponDuribility_Label.Size = new System.Drawing.Size(31, 15);
+            this.weaponDuribility_Label.TabIndex = 10;
+            this.weaponDuribility_Label.Text = "N/A";
+            // 
+            // damage_Label
+            // 
+            this.damage_Label.AutoSize = true;
+            this.damage_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.damage_Label.Location = new System.Drawing.Point(138, 114);
+            this.damage_Label.Name = "damage_Label";
+            this.damage_Label.Size = new System.Drawing.Size(15, 15);
+            this.damage_Label.TabIndex = 9;
+            this.damage_Label.Text = "2";
+            // 
+            // range_Label
+            // 
+            this.range_Label.AutoSize = true;
+            this.range_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.range_Label.Location = new System.Drawing.Point(138, 81);
+            this.range_Label.Name = "range_Label";
+            this.range_Label.Size = new System.Drawing.Size(15, 15);
+            this.range_Label.TabIndex = 8;
+            this.range_Label.Text = "1";
+            // 
+            // playerWeapon_Label
+            // 
+            this.playerWeapon_Label.AutoSize = true;
+            this.playerWeapon_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerWeapon_Label.Location = new System.Drawing.Point(138, 49);
+            this.playerWeapon_Label.Name = "playerWeapon_Label";
+            this.playerWeapon_Label.Size = new System.Drawing.Size(91, 15);
+            this.playerWeapon_Label.TabIndex = 7;
+            this.playerWeapon_Label.Text = "Barehanded";
+            // 
+            // playerHP_Label
+            // 
+            this.playerHP_Label.AutoSize = true;
+            this.playerHP_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerHP_Label.Location = new System.Drawing.Point(138, 23);
+            this.playerHP_Label.Name = "playerHP_Label";
+            this.playerHP_Label.Size = new System.Drawing.Size(61, 15);
+            this.playerHP_Label.TabIndex = 6;
+            this.playerHP_Label.Text = "100/100";
             // 
             // Gold_Label
             // 
@@ -196,66 +257,6 @@ namespace POETask2
             this.btnUp.UseVisualStyleBackColor = true;
             this.btnUp.Click += new System.EventHandler(this.btnUp_Click_1);
             // 
-            // playerHP_Label
-            // 
-            this.playerHP_Label.AutoSize = true;
-            this.playerHP_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerHP_Label.Location = new System.Drawing.Point(138, 23);
-            this.playerHP_Label.Name = "playerHP_Label";
-            this.playerHP_Label.Size = new System.Drawing.Size(61, 15);
-            this.playerHP_Label.TabIndex = 6;
-            this.playerHP_Label.Text = "100/100";
-            // 
-            // playerWeapon_Label
-            // 
-            this.playerWeapon_Label.AutoSize = true;
-            this.playerWeapon_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.playerWeapon_Label.Location = new System.Drawing.Point(138, 49);
-            this.playerWeapon_Label.Name = "playerWeapon_Label";
-            this.playerWeapon_Label.Size = new System.Drawing.Size(91, 15);
-            this.playerWeapon_Label.TabIndex = 7;
-            this.playerWeapon_Label.Text = "Barehanded";
-            // 
-            // range_Label
-            // 
-            this.range_Label.AutoSize = true;
-            this.range_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.range_Label.Location = new System.Drawing.Point(138, 81);
-            this.range_Label.Name = "range_Label";
-            this.range_Label.Size = new System.Drawing.Size(15, 15);
-            this.range_Label.TabIndex = 8;
-            this.range_Label.Text = "1";
-            // 
-            // damage_Label
-            // 
-            this.damage_Label.AutoSize = true;
-            this.damage_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.damage_Label.Location = new System.Drawing.Point(138, 114);
-            this.damage_Label.Name = "damage_Label";
-            this.damage_Label.Size = new System.Drawing.Size(15, 15);
-            this.damage_Label.TabIndex = 9;
-            this.damage_Label.Text = "2";
-            // 
-            // weaponDuribility_Label
-            // 
-            this.weaponDuribility_Label.AutoSize = true;
-            this.weaponDuribility_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.weaponDuribility_Label.Location = new System.Drawing.Point(138, 142);
-            this.weaponDuribility_Label.Name = "weaponDuribility_Label";
-            this.weaponDuribility_Label.Size = new System.Drawing.Size(31, 15);
-            this.weaponDuribility_Label.TabIndex = 10;
-            this.weaponDuribility_Label.Text = "N/A";
-            // 
-            // goldAmount_Label
-            // 
-            this.goldAmount_Label.AutoSize = true;
-            this.goldAmount_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.goldAmount_Label.Location = new System.Drawing.Point(138, 176);
-            this.goldAmount_Label.Name = "goldAmount_Label";
-            this.goldAmount_Label.Size = new System.Drawing.Size(15, 15);
-            this.goldAmount_Label.TabIndex = 11;
-            this.goldAmount_Label.Text = "0";
-            // 
             // attackUp_Btn
             // 
             this.attackUp_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -266,6 +267,7 @@ namespace POETask2
             this.attackUp_Btn.TabIndex = 12;
             this.attackUp_Btn.Text = "^";
             this.attackUp_Btn.UseVisualStyleBackColor = true;
+            this.attackUp_Btn.Click += new System.EventHandler(this.attackUp_Btn_Click);
             // 
             // attackLeft_Btn
             // 
@@ -277,6 +279,7 @@ namespace POETask2
             this.attackLeft_Btn.TabIndex = 14;
             this.attackLeft_Btn.Text = "<";
             this.attackLeft_Btn.UseVisualStyleBackColor = true;
+            this.attackLeft_Btn.Click += new System.EventHandler(this.attackLeft_Btn_Click);
             // 
             // attackRight_Btn
             // 
@@ -288,17 +291,7 @@ namespace POETask2
             this.attackRight_Btn.TabIndex = 15;
             this.attackRight_Btn.Text = ">";
             this.attackRight_Btn.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(84, 74);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 28);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "v";
-            this.button1.UseVisualStyleBackColor = true;
+            this.attackRight_Btn.Click += new System.EventHandler(this.attackRight_Btn_Click);
             // 
             // groupBox2
             // 
@@ -317,9 +310,9 @@ namespace POETask2
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.attackDown_Btn);
             this.groupBox3.Controls.Add(this.attackUp_Btn);
             this.groupBox3.Controls.Add(this.attackLeft_Btn);
-            this.groupBox3.Controls.Add(this.button1);
             this.groupBox3.Controls.Add(this.attackRight_Btn);
             this.groupBox3.Font = new System.Drawing.Font("Algerian", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(627, 235);
@@ -329,11 +322,32 @@ namespace POETask2
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Attack";
             // 
+            // attackLog_RTB
+            // 
+            this.attackLog_RTB.Location = new System.Drawing.Point(627, 24);
+            this.attackLog_RTB.Name = "attackLog_RTB";
+            this.attackLog_RTB.Size = new System.Drawing.Size(246, 191);
+            this.attackLog_RTB.TabIndex = 19;
+            this.attackLog_RTB.Text = "ATTACK LOG\n//////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n";
+            // 
+            // attackDown_Btn
+            // 
+            this.attackDown_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attackDown_Btn.Location = new System.Drawing.Point(84, 74);
+            this.attackDown_Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.attackDown_Btn.Name = "attackDown_Btn";
+            this.attackDown_Btn.Size = new System.Drawing.Size(75, 28);
+            this.attackDown_Btn.TabIndex = 17;
+            this.attackDown_Btn.Text = "v";
+            this.attackDown_Btn.UseVisualStyleBackColor = true;
+            this.attackDown_Btn.Click += new System.EventHandler(this.attackDown_Btn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 591);
+            this.Controls.Add(this.attackLog_RTB);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -374,9 +388,10 @@ namespace POETask2
         private System.Windows.Forms.Button attackUp_Btn;
         private System.Windows.Forms.Button attackLeft_Btn;
         private System.Windows.Forms.Button attackRight_Btn;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.RichTextBox attackLog_RTB;
+        private System.Windows.Forms.Button attackDown_Btn;
     }
 }
 

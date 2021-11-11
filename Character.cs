@@ -43,6 +43,15 @@ namespace POETask2
             Down = 4
         }
 
+        public enum AttackEnum
+        {
+            NoAttack = 0,
+            Up = 1,
+            Left = 2,
+            Right = 3,
+            Down = 4
+        }
+
         protected Character(int x, int y, TileType ConstructType, char ConstructSymbol) : base(x, y, ConstructType, ConstructSymbol)
         {
             ConstructSymbol = Symbol;

@@ -99,5 +99,31 @@ namespace POETask2
         {
 
         }
+
+        private void attackUp_Btn_Click(object sender, EventArgs e)
+        {
+            engine.GetMap().HeroAttack(Character.AttackEnum.Up);
+            lblMap.Text = engine.ToString();
+        }
+
+        private void attackDown_Btn_Click(object sender, EventArgs e)
+        {
+            engine.GetMap().HeroAttack(Character.AttackEnum.Down);
+            lblMap.Text = engine.ToString();
+        }
+
+        private void attackRight_Btn_Click(object sender, EventArgs e)
+        {
+            engine.GetMap().HeroAttack(Character.AttackEnum.Down);
+            lblMap.Text = engine.ToString();
+        }
+
+        private void attackLeft_Btn_Click(object sender, EventArgs e)
+        {
+            engine.GetMap().HeroAttack(Character.AttackEnum.Down);
+            lblMap.Text = engine.ToString();
+        }
+
+        
     }
 }

@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace POETask2
 {
     class Map
     {
-        public Tile[,] map;
+        public static Tile[,] map;
         public Hero playerCharacter;
         public Enemy[] enemies;
         public Gold gold;
@@ -32,7 +33,7 @@ namespace POETask2
         private static int goldennAmt = goblinAmount.Next(1, 5);
         public static int goldCollected = 0;
         public static bool canMove = true;
-        Hero player;
+        public static Hero player;
         Enemy enemy;
 
 
@@ -105,7 +106,7 @@ namespace POETask2
             map[player.GetX(), player.GetY()] = player;
 
 
-            for(int i = 0; i < enemyAmount + 1; i++)
+            for (int i = 0; i < enemyAmount + 1; i++)
             {
                 enemy = (Enemy)Create(Tile.TileType.Enemy);
                 map[enemy.GetX(), enemy.GetY()] = enemy;
@@ -151,7 +152,7 @@ namespace POETask2
                     }
             }
 
-            if (map[x, y] is Goblin || map[x,y] is Obstacle)
+            if (map[x, y] is Goblin || map[x, y] is Obstacle)
             {
                 canMove = false;
                 return;
@@ -160,7 +161,7 @@ namespace POETask2
             map[player.GetX(), player.GetY()] = new EmptyTile(player.GetX(), player.GetY(), Tile.TileType.EmptyTile);
             player.ReturnMove(move);
 
-            if(map[player.GetX(), player.GetY()] is Gold)
+            if (map[player.GetX(), player.GetY()] is Gold)
             {
                 goldCollected = goldCollected + 1;
             }
@@ -168,9 +169,55 @@ namespace POETask2
             map[player.GetX(), player.GetY()] = player;
         }
 
-        public void UpdateVision()  //Updates the vision array for each character 
+        public void HeroAttack(Character.AttackEnum attack)
         {
+            int x = player.GetX();
+            int y = player.GetY();
 
+            switch (attack)
+            {
+                case Hero.AttackEnum.Up:
+                    {
+                        if (map[x - 1, y] is Enemy)
+                        {
+                            MessageBox.Show("Hit!");
+                        }
+                        //MessageBox.Show(typeof(map[x-1,y]).ToString());
+                        break;
+                    }
+
+                case Hero.AttackEnum.Down:
+                    {
+                        if (map[x + 1, y] is Enemy)
+                        {
+                            MessageBox.Show("Hit!");
+                        }
+                        break;
+                    }
+
+                case Hero.AttackEnum.Left:
+                    {
+                        if (map[x, y - 1] is Enemy)
+                        {
+                            MessageBox.Show("Hit!");
+                        }
+                        break;
+                    }
+
+                case Hero.AttackEnum.Right:
+                    {
+                        if (map[x, y + 1] is Enemy)
+                        {
+                            MessageBox.Show("Hit!");
+                        }
+                        break;
+                    }
+            }
+
+           // public void UpdateVision()  //Updates the vision array for each character 
+            //{
+
+            //}
         }
     }
 }

@@ -51,7 +51,11 @@ namespace POETask2
             this.attackLeft_Btn = new System.Windows.Forms.Button();
             this.attackRight_Btn = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -71,7 +75,7 @@ namespace POETask2
             this.groupBox1.Font = new System.Drawing.Font("Algerian", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(357, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 203);
+            this.groupBox1.Size = new System.Drawing.Size(251, 203);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Stats";
@@ -149,7 +153,7 @@ namespace POETask2
             // 
             // btnDown
             // 
-            this.btnDown.Location = new System.Drawing.Point(402, 528);
+            this.btnDown.Location = new System.Drawing.Point(88, 76);
             this.btnDown.Margin = new System.Windows.Forms.Padding(2);
             this.btnDown.Name = "btnDown";
             this.btnDown.Size = new System.Drawing.Size(75, 28);
@@ -160,7 +164,7 @@ namespace POETask2
             // 
             // btnRight
             // 
-            this.btnRight.Location = new System.Drawing.Point(482, 528);
+            this.btnRight.Location = new System.Drawing.Point(167, 76);
             this.btnRight.Margin = new System.Windows.Forms.Padding(2);
             this.btnRight.Name = "btnRight";
             this.btnRight.Size = new System.Drawing.Size(75, 28);
@@ -171,7 +175,7 @@ namespace POETask2
             // 
             // btnLeft
             // 
-            this.btnLeft.Location = new System.Drawing.Point(322, 528);
+            this.btnLeft.Location = new System.Drawing.Point(9, 76);
             this.btnLeft.Margin = new System.Windows.Forms.Padding(2);
             this.btnLeft.Name = "btnLeft";
             this.btnLeft.Size = new System.Drawing.Size(75, 28);
@@ -183,7 +187,7 @@ namespace POETask2
             // btnUp
             // 
             this.btnUp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUp.Location = new System.Drawing.Point(402, 496);
+            this.btnUp.Location = new System.Drawing.Point(88, 44);
             this.btnUp.Margin = new System.Windows.Forms.Padding(2);
             this.btnUp.Name = "btnUp";
             this.btnUp.Size = new System.Drawing.Size(75, 28);
@@ -208,9 +212,9 @@ namespace POETask2
             this.playerWeapon_Label.Font = new System.Drawing.Font("Algerian", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerWeapon_Label.Location = new System.Drawing.Point(138, 49);
             this.playerWeapon_Label.Name = "playerWeapon_Label";
-            this.playerWeapon_Label.Size = new System.Drawing.Size(40, 15);
+            this.playerWeapon_Label.Size = new System.Drawing.Size(91, 15);
             this.playerWeapon_Label.TabIndex = 7;
-            this.playerWeapon_Label.Text = "Fists";
+            this.playerWeapon_Label.Text = "Barehanded";
             // 
             // range_Label
             // 
@@ -255,7 +259,7 @@ namespace POETask2
             // attackUp_Btn
             // 
             this.attackUp_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attackUp_Btn.Location = new System.Drawing.Point(692, 496);
+            this.attackUp_Btn.Location = new System.Drawing.Point(84, 44);
             this.attackUp_Btn.Margin = new System.Windows.Forms.Padding(2);
             this.attackUp_Btn.Name = "attackUp_Btn";
             this.attackUp_Btn.Size = new System.Drawing.Size(75, 28);
@@ -266,7 +270,7 @@ namespace POETask2
             // attackLeft_Btn
             // 
             this.attackLeft_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attackLeft_Btn.Location = new System.Drawing.Point(613, 528);
+            this.attackLeft_Btn.Location = new System.Drawing.Point(5, 74);
             this.attackLeft_Btn.Margin = new System.Windows.Forms.Padding(2);
             this.attackLeft_Btn.Name = "attackLeft_Btn";
             this.attackLeft_Btn.Size = new System.Drawing.Size(75, 28);
@@ -277,7 +281,7 @@ namespace POETask2
             // attackRight_Btn
             // 
             this.attackRight_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.attackRight_Btn.Location = new System.Drawing.Point(771, 526);
+            this.attackRight_Btn.Location = new System.Drawing.Point(163, 74);
             this.attackRight_Btn.Margin = new System.Windows.Forms.Padding(2);
             this.attackRight_Btn.Name = "attackRight_Btn";
             this.attackRight_Btn.Size = new System.Drawing.Size(75, 28);
@@ -288,7 +292,7 @@ namespace POETask2
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(692, 528);
+            this.button1.Location = new System.Drawing.Point(84, 74);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 28);
@@ -296,27 +300,52 @@ namespace POETask2
             this.button1.Text = "v";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.btnUp);
+            this.groupBox2.Controls.Add(this.btnLeft);
+            this.groupBox2.Controls.Add(this.btnDown);
+            this.groupBox2.Controls.Add(this.btnRight);
+            this.groupBox2.Font = new System.Drawing.Font("Algerian", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(357, 235);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(251, 119);
+            this.groupBox2.TabIndex = 17;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Movement";
+            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.attackUp_Btn);
+            this.groupBox3.Controls.Add(this.attackLeft_Btn);
+            this.groupBox3.Controls.Add(this.button1);
+            this.groupBox3.Controls.Add(this.attackRight_Btn);
+            this.groupBox3.Font = new System.Drawing.Font("Algerian", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(627, 235);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(246, 119);
+            this.groupBox3.TabIndex = 18;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Attack";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(919, 591);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.attackRight_Btn);
-            this.Controls.Add(this.attackLeft_Btn);
-            this.Controls.Add(this.attackUp_Btn);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblMap);
-            this.Controls.Add(this.btnDown);
-            this.Controls.Add(this.btnRight);
-            this.Controls.Add(this.btnLeft);
-            this.Controls.Add(this.btnUp);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -346,6 +375,8 @@ namespace POETask2
         private System.Windows.Forms.Button attackLeft_Btn;
         private System.Windows.Forms.Button attackRight_Btn;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
     }
 }
 

@@ -30,6 +30,8 @@ namespace POETask2
         private static int mageAmt = mageAmount.Next(1, enemyAmount);
         private static Random goldAmount = new Random();
         private static int goldennAmt = goblinAmount.Next(1, 5);
+        public static int goldCollected = 0;
+        public static bool canMove = true;
         Hero player;
         Enemy enemy;
 
@@ -103,13 +105,13 @@ namespace POETask2
             map[player.GetX(), player.GetY()] = player;
 
 
-            for(int i = enemyAmount; i < 9; i++)
+            for(int i = 0; i < enemyAmount + 1; i++)
             {
                 enemy = (Enemy)Create(Tile.TileType.Enemy);
                 map[enemy.GetX(), enemy.GetY()] = enemy;
             }
 
-            for (int i = goldennAmt; i < 9; i++)
+            for (int i = 0; i < goldennAmt + 1; i++)
             {
                 gold = (Gold)Create(Tile.TileType.Gold);
                 map[gold.GetX(), gold.GetY()] = gold;
@@ -119,8 +121,50 @@ namespace POETask2
 
         public void MoveHero(Character.MovementEnum move)
         {
+            int x = player.GetX();
+            int y = player.GetY();
+
+            switch (move)
+            {
+                case Character.MovementEnum.Up:
+                    {
+                        x--;
+                        break;
+                    }
+
+                case Character.MovementEnum.Down:
+                    {
+                        x++;
+                        break;
+                    }
+
+                case Character.MovementEnum.Left:
+                    {
+                        y--;
+                        break;
+                    }
+
+                case Character.MovementEnum.Right:
+                    {
+                        y++;
+                        break;
+                    }
+            }
+
+            if (map[x, y] is Goblin || map[x,y] is Obstacle)
+            {
+                canMove = false;
+                return;
+            }
+
             map[player.GetX(), player.GetY()] = new EmptyTile(player.GetX(), player.GetY(), Tile.TileType.EmptyTile);
             player.ReturnMove(move);
+
+            if(map[player.GetX(), player.GetY()] is Gold)
+            {
+                goldCollected = goldCollected + 1;
+            }
+
             map[player.GetX(), player.GetY()] = player;
         }
 

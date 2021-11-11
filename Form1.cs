@@ -62,5 +62,29 @@ namespace POETask2
             engine.GetMap().MoveHero(Character.MovementEnum.Left);
             lblMap.Text = engine.ToString();
         }
+
+        private void btnRight_Click_1(object sender, EventArgs e)
+        {
+            engine.GetMap().MoveHero(Character.MovementEnum.Right);
+            lblMap.Text = engine.ToString();
+        }
+
+        private void btnUp_Click_1(object sender, EventArgs e)
+        {
+            engine.GetMap().MoveHero(Character.MovementEnum.Up);
+            lblMap.Text = engine.ToString();
+        }
+
+        private void btnLeft_Click_1(object sender, EventArgs e)
+        {
+            engine.GetMap().MoveHero(Character.MovementEnum.Left);
+            lblMap.Text = engine.ToString();
+        }
+
+        private void btnDown_Click_1(object sender, EventArgs e)
+        {
+            engine.GetMap().MoveHero(Character.MovementEnum.Down);
+            lblMap.Text = engine.ToString();
+        }
     }
 }

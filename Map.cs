@@ -20,8 +20,15 @@ namespace POETask2
         public int borderHeight;
         public int borderWidth;
         private int AmtEnemy;
-        Random numbers = new Random();
+        private static Random numbers = new Random();
+        private static Random rand = new Random();
+        private static int enemyAmount = rand.Next(1, 9);
+        private static Random goblinAmount = new Random();
+        private static int goblinAmt = goblinAmount.Next(1, enemyAmount);
+        private static Random mageAmount = new Random();
+        private static int mageAmt = mageAmount.Next(1, enemyAmount);
         Hero player;
+        Enemy enemy;
 
         public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int amtEnemy)
         {
@@ -85,8 +92,14 @@ namespace POETask2
             }
 
             player = (Hero)Create(Tile.TileType.Hero);
-
             map[player.GetX(), player.GetY()] = player;
+
+
+            for(int i = enemyAmount; i < 9; i++)
+            {
+                enemy = (Enemy)Create(Tile.TileType.Enemy);
+                map[enemy.GetX(), enemy.GetY()] = enemy;
+            }
         }
 
         public void MoveHero(Character.MovementEnum move)

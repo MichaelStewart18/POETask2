@@ -47,6 +47,10 @@ namespace POETask2
             this.damage_Label = new System.Windows.Forms.Label();
             this.weaponDuribility_Label = new System.Windows.Forms.Label();
             this.goldAmount_Label = new System.Windows.Forms.Label();
+            this.attackUp_Btn = new System.Windows.Forms.Button();
+            this.attackLeft_Btn = new System.Windows.Forms.Button();
+            this.attackRight_Btn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -248,11 +252,59 @@ namespace POETask2
             this.goldAmount_Label.TabIndex = 11;
             this.goldAmount_Label.Text = "0";
             // 
+            // attackUp_Btn
+            // 
+            this.attackUp_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attackUp_Btn.Location = new System.Drawing.Point(692, 496);
+            this.attackUp_Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.attackUp_Btn.Name = "attackUp_Btn";
+            this.attackUp_Btn.Size = new System.Drawing.Size(75, 28);
+            this.attackUp_Btn.TabIndex = 12;
+            this.attackUp_Btn.Text = "^";
+            this.attackUp_Btn.UseVisualStyleBackColor = true;
+            // 
+            // attackLeft_Btn
+            // 
+            this.attackLeft_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attackLeft_Btn.Location = new System.Drawing.Point(613, 528);
+            this.attackLeft_Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.attackLeft_Btn.Name = "attackLeft_Btn";
+            this.attackLeft_Btn.Size = new System.Drawing.Size(75, 28);
+            this.attackLeft_Btn.TabIndex = 14;
+            this.attackLeft_Btn.Text = "<";
+            this.attackLeft_Btn.UseVisualStyleBackColor = true;
+            // 
+            // attackRight_Btn
+            // 
+            this.attackRight_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attackRight_Btn.Location = new System.Drawing.Point(771, 526);
+            this.attackRight_Btn.Margin = new System.Windows.Forms.Padding(2);
+            this.attackRight_Btn.Name = "attackRight_Btn";
+            this.attackRight_Btn.Size = new System.Drawing.Size(75, 28);
+            this.attackRight_Btn.TabIndex = 15;
+            this.attackRight_Btn.Text = ">";
+            this.attackRight_Btn.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(692, 528);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 28);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "v";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 591);
+            this.ClientSize = new System.Drawing.Size(919, 591);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.attackRight_Btn);
+            this.Controls.Add(this.attackLeft_Btn);
+            this.Controls.Add(this.attackUp_Btn);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblMap);
             this.Controls.Add(this.btnDown);
@@ -290,6 +342,10 @@ namespace POETask2
         private System.Windows.Forms.Label range_Label;
         private System.Windows.Forms.Label playerWeapon_Label;
         private System.Windows.Forms.Label playerHP_Label;
+        private System.Windows.Forms.Button attackUp_Btn;
+        private System.Windows.Forms.Button attackLeft_Btn;
+        private System.Windows.Forms.Button attackRight_Btn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

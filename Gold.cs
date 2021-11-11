@@ -9,8 +9,14 @@ namespace POETask2
     public class Gold : Item 
     {
         private Random r = new Random();
+        private int goldAmt;
 
-       public Gold(int x, int y, TileType ConstructType, char Symbol, int ConstructHp, int ConstructMaxHP) : base(x, y, ConstructType, '@')
+        public int GoldDrop()
+        {
+            return goldAmt;
+        }
+
+    public Gold(int x, int y) : base(x, y, TileType.Gold, '@')
         {
             
         }

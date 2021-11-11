@@ -11,6 +11,7 @@ namespace POETask2
         public Tile[,] map;
         public Hero playerCharacter;
         public Enemy[] enemies;
+        public Gold gold;
         private int mapHeight;
         private int mapWidth;
         private int MinHeight;
@@ -27,8 +28,11 @@ namespace POETask2
         private static int goblinAmt = goblinAmount.Next(1, enemyAmount);
         private static Random mageAmount = new Random();
         private static int mageAmt = mageAmount.Next(1, enemyAmount);
+        private static Random goldAmount = new Random();
+        private static int goldennAmt = goblinAmount.Next(1, 5);
         Hero player;
         Enemy enemy;
+
 
         public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int amtEnemy)
         {
@@ -71,6 +75,10 @@ namespace POETask2
             {
                 return new Hero(positionX, positionY, type, 'H', 20, 20);
             }
+            else if (type == Tile.TileType.Gold)
+            {
+                return new Gold(positionX, positionY);
+            }
 
             return new Hero(positionX, positionY, Tile.TileType.Hero, 'H', 20, 20);
 
@@ -100,6 +108,13 @@ namespace POETask2
                 enemy = (Enemy)Create(Tile.TileType.Enemy);
                 map[enemy.GetX(), enemy.GetY()] = enemy;
             }
+
+            for (int i = goldennAmt; i < 9; i++)
+            {
+                gold = (Gold)Create(Tile.TileType.Gold);
+                map[gold.GetX(), gold.GetY()] = gold;
+            }
+
         }
 
         public void MoveHero(Character.MovementEnum move)

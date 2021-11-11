@@ -13,10 +13,10 @@ namespace POETask2
 
         protected Item(int x, int y, TileType ConstructType, char ConstructSymbol) : base(x, y, ConstructType, ConstructSymbol)
         {
-            ConstructSymbol = Symbol;
+            
         }
 
-        public override string ToString()
+        public string ToString()
         {
             return itemType.ToString();
         }

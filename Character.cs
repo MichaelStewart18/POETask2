@@ -72,7 +72,7 @@ namespace POETask2
 
         public bool IsDead() //Check if the character is dead
         {
-            if(Hp == 0)
+            if(Hp < 1)
             {
                 dead = true;
             }

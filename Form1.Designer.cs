@@ -205,7 +205,7 @@ namespace POETask2
             // 
             this.lblMap.AutoSize = true;
             this.lblMap.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMap.Location = new System.Drawing.Point(54, 12);
+            this.lblMap.Location = new System.Drawing.Point(52, 12);
             this.lblMap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMap.Name = "lblMap";
             this.lblMap.Size = new System.Drawing.Size(38, 18);
@@ -347,7 +347,7 @@ namespace POETask2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(919, 591);
+            this.ClientSize = new System.Drawing.Size(919, 491);
             this.Controls.Add(this.attackLog_RTB);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

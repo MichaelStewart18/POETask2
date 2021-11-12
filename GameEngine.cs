@@ -18,7 +18,7 @@ namespace POETask2
 
         public GameEngine()
         {
-            map = new Map(10, 20, 20, 40, 5);
+            map = new Map(20, 20, 20, 20, 5);
         }
 
         public Map GetMap()

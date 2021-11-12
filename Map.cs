@@ -55,8 +55,6 @@ namespace POETask2
 
             enemies = new Enemy[AmtEnemy];
 
-            player = (Hero)Create(Tile.TileType.Hero);
-
             MakeMap();
         }
 
@@ -105,11 +103,10 @@ namespace POETask2
             player = (Hero)Create(Tile.TileType.Hero);
             map[player.GetX(), player.GetY()] = player;
 
-
-            for (int i = 0; i < enemyAmount + 1; i++)
+            for (int i = 0; i < AmtEnemy; i++)
             {
-                enemy = (Enemy)Create(Tile.TileType.Enemy);
-                map[enemy.GetX(), enemy.GetY()] = enemy;
+                enemies[i] = (Goblin)Create(Tile.TileType.Enemy);
+                map[enemies[i].GetX(), enemies[i].GetY()] = enemies[i];
             }
 
             for (int i = 0; i < goldennAmt + 1; i++)
@@ -178,11 +175,18 @@ namespace POETask2
             {
                 case Hero.AttackEnum.Up:
                     {
-                        if (map[x - 1, y] is Enemy)
+                        Tile tile = map[x - 1, y];
+                        if (tile is Enemy)
                         {
-                            MessageBox.Show("Hit!");
+                            Enemy enemy = (Enemy)tile;
+                            enemy.TakeDamage();
+                            enemy.IsDead();
+
+                            if (enemy.IsDead())
+                            {
+                                map[x - 1, y] = new EmptyTile(x - 1, y, Tile.TileType.EmptyTile);
+                            }
                         }
-                        //MessageBox.Show(typeof(map[x-1,y]).ToString());
                         break;
                     }
 
@@ -190,7 +194,18 @@ namespace POETask2
                     {
                         if (map[x + 1, y] is Enemy)
                         {
-                            MessageBox.Show("Hit!");
+                            Tile tile = map[x + 1, y];
+                            if (tile is Enemy)
+                            {
+                                Enemy enemy = (Enemy)tile;
+                                enemy.TakeDamage();
+                                enemy.IsDead();
+
+                                if (enemy.IsDead())
+                                {
+                                    map[x + 1, y] = new EmptyTile(x+1, y, Tile.TileType.EmptyTile);
+                                }
+                            }
                         }
                         break;
                     }
@@ -199,7 +214,18 @@ namespace POETask2
                     {
                         if (map[x, y - 1] is Enemy)
                         {
-                            MessageBox.Show("Hit!");
+                            Tile tile = map[x, y - 1];
+                            if (tile is Enemy)
+                            {
+                                Enemy enemy = (Enemy)tile;
+                                enemy.TakeDamage();
+                                enemy.IsDead();
+
+                                if (enemy.IsDead())
+                                {
+                                    map[x, y - 1] = new EmptyTile(x, y - 1, Tile.TileType.EmptyTile);
+                                }
+                            }
                         }
                         break;
                     }
@@ -208,7 +234,18 @@ namespace POETask2
                     {
                         if (map[x, y + 1] is Enemy)
                         {
-                            MessageBox.Show("Hit!");
+                            Tile tile = map[x, y + 1];
+                            if (tile is Enemy)
+                            {
+                                Enemy enemy = (Enemy)tile;
+                                enemy.TakeDamage();
+                                enemy.IsDead();
+
+                                if (enemy.IsDead())
+                                {
+                                    map[x, y + 1] = new EmptyTile(x, y + 1, Tile.TileType.EmptyTile);
+                                }
+                            }
                         }
                         break;
                     }

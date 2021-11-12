@@ -52,8 +52,8 @@ namespace POETask2
             this.attackRight_Btn = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.attackLog_RTB = new System.Windows.Forms.RichTextBox();
             this.attackDown_Btn = new System.Windows.Forms.Button();
+            this.attackLog_RTB = new System.Windows.Forms.RichTextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -205,7 +205,7 @@ namespace POETask2
             // 
             this.lblMap.AutoSize = true;
             this.lblMap.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMap.Location = new System.Drawing.Point(39, 42);
+            this.lblMap.Location = new System.Drawing.Point(54, 12);
             this.lblMap.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMap.Name = "lblMap";
             this.lblMap.Size = new System.Drawing.Size(38, 18);
@@ -322,14 +322,6 @@ namespace POETask2
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Attack";
             // 
-            // attackLog_RTB
-            // 
-            this.attackLog_RTB.Location = new System.Drawing.Point(627, 24);
-            this.attackLog_RTB.Name = "attackLog_RTB";
-            this.attackLog_RTB.Size = new System.Drawing.Size(246, 191);
-            this.attackLog_RTB.TabIndex = 19;
-            this.attackLog_RTB.Text = "ATTACK LOG\n//////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\n";
-            // 
             // attackDown_Btn
             // 
             this.attackDown_Btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -341,6 +333,15 @@ namespace POETask2
             this.attackDown_Btn.Text = "v";
             this.attackDown_Btn.UseVisualStyleBackColor = true;
             this.attackDown_Btn.Click += new System.EventHandler(this.attackDown_Btn_Click);
+            // 
+            // attackLog_RTB
+            // 
+            this.attackLog_RTB.Font = new System.Drawing.Font("Algerian", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.attackLog_RTB.Location = new System.Drawing.Point(627, 24);
+            this.attackLog_RTB.Name = "attackLog_RTB";
+            this.attackLog_RTB.Size = new System.Drawing.Size(246, 191);
+            this.attackLog_RTB.TabIndex = 19;
+            this.attackLog_RTB.Text = "ATTACK LOG\n///////\\\\\\\\\\\\\\\\\n";
             // 
             // Form1
             // 
@@ -390,8 +391,8 @@ namespace POETask2
         private System.Windows.Forms.Button attackRight_Btn;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.RichTextBox attackLog_RTB;
         private System.Windows.Forms.Button attackDown_Btn;
+        public System.Windows.Forms.RichTextBox attackLog_RTB;
     }
 }
 

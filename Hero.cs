@@ -54,7 +54,7 @@ namespace POETask2
             {
                 case AttackEnum.Up:
                     {
-                        if(Map.map[x-1, y] is Goblin)
+                        if(Map.map[x-1, y] is Enemy)
                         {
                             MessageBox.Show("Hit!");
                         }
@@ -63,7 +63,7 @@ namespace POETask2
 
                 case AttackEnum.Down:
                     {
-                        if (Map.map[x+1, y] is Goblin)
+                        if (Map.map[x+1, y] is Enemy)
                         {
                             MessageBox.Show("Hit!");
                         }
@@ -81,9 +81,9 @@ namespace POETask2
 
                 case AttackEnum.Right:
                     {
-                        if (Map.map[x, y+1] is Goblin)
+                        if (Map.map[x, y+1] is Enemy)
                         {
-                            MessageBox.Show("Hit!");
+                            
                         }
                         return attack;
                     }
@@ -95,5 +95,6 @@ namespace POETask2
         {
             return "Hero" + " at [" + x.ToString() + y.ToString() + "]" + Damage;
         }
+
     }
 }

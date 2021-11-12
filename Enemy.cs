@@ -11,6 +11,7 @@ namespace POETask2
         protected Random r = new Random();
 
         private int enemyDamage;
+        int damageTaken = 2;
 
         public int EnemyDamage
         {
@@ -23,6 +24,13 @@ namespace POETask2
             damage = ConstructEnemyDamage;
             hp = ConstructHp;
             maxhp = ConstructMaxHP;
+
+        }
+
+        public void TakeDamage()
+        {
+            Hp -= damageTaken;
+            
 
         }
 

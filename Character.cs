@@ -13,6 +13,7 @@ namespace POETask2
         protected int MaxHp;
         protected int Damage;
         protected char Symbol;
+        bool dead  = false;
 
         public Tile[] characterVision = new Tile[4];
 
@@ -69,7 +70,15 @@ namespace POETask2
             target.Hp = target.Hp - 10;
         }
 
-        public bool IsDead = false;    //Check if the character is dead
+        public bool IsDead() //Check if the character is dead
+        {
+            if(Hp == 0)
+            {
+                dead = true;
+            }
+
+            return dead;
+        }    
 
 
         public virtual bool CheckRange(Character target)    //Check if the target is in range of the character

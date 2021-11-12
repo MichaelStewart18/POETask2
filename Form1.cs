@@ -14,6 +14,11 @@ namespace POETask2
     {
         GameEngine engine;
 
+        public void UpdateAttackLog()
+        {
+            attackLog_RTB.Text = "some stuff";
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -106,7 +111,7 @@ namespace POETask2
             lblMap.Text = engine.ToString();
         }
 
-        private void attackDown_Btn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             engine.GetMap().HeroAttack(Character.AttackEnum.Down);
             lblMap.Text = engine.ToString();
@@ -114,16 +119,20 @@ namespace POETask2
 
         private void attackRight_Btn_Click(object sender, EventArgs e)
         {
-            engine.GetMap().HeroAttack(Character.AttackEnum.Down);
+            engine.GetMap().HeroAttack(Character.AttackEnum.Right);
             lblMap.Text = engine.ToString();
         }
 
         private void attackLeft_Btn_Click(object sender, EventArgs e)
         {
-            engine.GetMap().HeroAttack(Character.AttackEnum.Down);
+            engine.GetMap().HeroAttack(Character.AttackEnum.Left);
             lblMap.Text = engine.ToString();
         }
 
-        
+        private void attackDown_Btn_Click(object sender, EventArgs e)
+        {
+            engine.GetMap().HeroAttack(Character.AttackEnum.Down);
+            lblMap.Text = engine.ToString();
+        }
     }
 }

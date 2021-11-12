@@ -74,6 +74,8 @@ namespace POETask2
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
+
+            engine.GetMap().MoveEnemy(Character.MovementEnum.Right);
         }
 
         private void btnUp_Click_1(object sender, EventArgs e)
@@ -82,6 +84,8 @@ namespace POETask2
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
+
+            engine.GetMap().MoveEnemy(Character.MovementEnum.Up);
         }
 
         private void btnLeft_Click_1(object sender, EventArgs e)
@@ -90,6 +94,8 @@ namespace POETask2
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
+
+            engine.GetMap().MoveEnemy(Character.MovementEnum.Left);
         }
 
         private void btnDown_Click_1(object sender, EventArgs e)
@@ -98,6 +104,8 @@ namespace POETask2
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
+
+            engine.GetMap().MoveEnemy(Character.MovementEnum.Down);
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

@@ -13,23 +13,36 @@ namespace POETask2
 
         }
 
-        public override MovementEnum ReturnMove(MovementEnum GoblinMoves)
+        public override MovementEnum ReturnMove(MovementEnum GoblinMove)
         {
-            bool ValidMove = false;
-            int move = 0;
-            MovementEnum Output = MovementEnum.NoMovement;
-
-            while (ValidMove == false)
+            switch (GoblinMove)
             {
-                move = r.Next(0, 5);
-                ValidMove = true;
+                case MovementEnum.Up:
+                    {
+                        x--;
+                        return GoblinMove;
+                    }
 
-                if ((characterVision[move].ToString() != "Wall") & (characterVision[move].ToString() != "Hero"))
-                {
-                    ValidMove = true;
-                }
+                case MovementEnum.Down:
+                    {
+                        x++;
+                        return GoblinMove;
+                    }
+
+                case MovementEnum.Left:
+                    {
+                        y--;
+                        return GoblinMove;
+                    }
+
+                case MovementEnum.Right:
+                    {
+                        y++;
+                        return GoblinMove;
+                    }
             }
-            return (MovementEnum)move;
+
+            return (MovementEnum)GoblinMove;
         }
 
         public override String ToString()

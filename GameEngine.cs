@@ -28,7 +28,7 @@ namespace POETask2
 
         public bool MovePlayer(Character.MovementEnum direction)
         {
-            return true;
+            return false;
         }
 
         public override String ToString()

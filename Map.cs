@@ -257,10 +257,67 @@ namespace POETask2
                     }
             }
 
+
+
+
            // public void UpdateVision()  //Updates the vision array for each character 
             //{
 
             //}
+        }
+
+        public void MoveEnemy(Character.MovementEnum move)
+        {
+            for(int i = 0; i < AmtEnemy; i++)
+            {
+
+
+                int x = enemies[i].GetX();
+                int y = enemies[i].GetY();
+
+                switch (move)
+                {
+                    case Character.MovementEnum.Up:
+                        {
+                            x--;
+                            break;
+                        }
+
+                    case Character.MovementEnum.Down:
+                        {
+                            x++;
+                            break;
+                        }
+
+                    case Character.MovementEnum.Left:
+                        {
+                            y--;
+                            break;
+                        }
+
+                    case Character.MovementEnum.Right:
+                        {
+                            y++;
+                            break;
+                        }
+                }
+
+                if (map[x, y] is Goblin || map[x, y] is Obstacle || map[x, y] is Mage)
+                {
+                    canMove = false;
+                    return;
+                }
+
+                map[player.GetX(), player.GetY()] = new EmptyTile(player.GetX(), player.GetY(), Tile.TileType.EmptyTile);
+                enemies[i].ReturnMove(move);
+
+                if (map[player.GetX(), player.GetY()] is Gold)
+                {
+                    goldCollected = goldCollected + 1;
+                }
+
+                map[enemies[i].GetX(), enemies[i].GetY()] = enemies[i];
+            }
         }
     }
 }

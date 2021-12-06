@@ -30,7 +30,7 @@ namespace POETask2
             }
             if (WeaponType == MeleeWeaponTypes.BareHanded)
             {
-                base.Symbol = '.';
+                base.Symbol = 'B';
                 base.Durability = 0;
                 base.Damage = 0;
                 base.Cost = 0;

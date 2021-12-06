@@ -9,6 +9,9 @@ namespace POETask2
 {
     class Map
     {
+
+        ////////WELOCME TO MY PILLAR OF VARIABLES\\\\\\\\\
+
         public static Tile[,] map;
         public Hero playerCharacter;
         public Enemy[] enemies;
@@ -39,6 +42,7 @@ namespace POETask2
         public static Hero player;
         Enemy enemy;
 
+        ////////THANK YOU FOR VISTING THE PILLAR OF VARIABLES\\\\\\\\\
 
         public Map(int minHeight, int maxHeight, int minWidth, int maxWidth, int amtEnemy)
         {

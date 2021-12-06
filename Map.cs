@@ -80,6 +80,10 @@ namespace POETask2
             {
                 return new Gold(positionX, positionY);
             }
+            else if (type == Tile.TileType.Enemy)
+            {
+                return (Enemy)Activator.CreateInstance(EnemyType, positionX, positionY, type, EnemyType == typeof(Leader) ? 'L' : 2, 20);
+            }
 
             return new Hero(positionX, positionY, Tile.TileType.Hero, 'H', 20, 20);
 
@@ -308,15 +312,10 @@ namespace POETask2
                     return;
                 }
 
-                map[player.GetX(), player.GetY()] = new EmptyTile(player.GetX(), player.GetY(), Tile.TileType.EmptyTile);
+                map[enemies[i].GetX(), enemies[i].GetY()] = new EmptyTile(enemies[i].GetX(), enemies[i].GetY(), Tile.TileType.EmptyTile);
                 enemies[i].ReturnMove(move);
 
-                if (map[player.GetX(), player.GetY()] is Gold)
-                {
-                    goldCollected = goldCollected + 1;
-                }
-
-                map[enemies[i].GetX(), enemies[i].GetY()] = enemies[i];
+                map[x, y] = enemies[i];
             }
         }
     }

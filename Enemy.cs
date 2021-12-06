@@ -29,9 +29,7 @@ namespace POETask2
 
         public void TakeDamage()
         {
-            Hp -= damageTaken;
-            
-
+            Hp -= damageTaken;            
         }
 
         public override String ToString()

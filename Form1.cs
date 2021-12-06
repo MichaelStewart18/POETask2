@@ -14,6 +14,8 @@ namespace POETask2
     {
         GameEngine engine;
 
+
+
         public void UpdateAttackLog()
         {
             attackLog_RTB.Text = "some stuff";

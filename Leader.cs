@@ -18,7 +18,7 @@ namespace POETask2
 
         [NonSerialized] public Random r;
 
-        public Leader(int i, int j, TileType ConstructType = TileType.Enemy, string ConstructSymbol = "L", int ConstructEnemyDMG = 2, int ConstructHP = 20) : base(i, j, ConstructType, 'L', 2, 20, 20)
+        public Leader(int i, int j, TileType ConstructType = TileType.Enemy, char ConstructSymbol = 'L', int ConstructEnemyDMG = 2, int ConstructHP = 20) : base(i, j, ConstructType, 'L', 2, 20, 20)
         {
            
         }

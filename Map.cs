@@ -70,7 +70,7 @@ namespace POETask2
 
             if (type == Tile.TileType.Enemy)
             {
-                return (Enemy)Activator.CreateInstance(EnemyType, positionX, positionY, type, EnemyType == typeof(Goblin) ? 'G' : 'M', 1, 10);
+                return (Enemy)Activator.CreateInstance(EnemyType, positionX, positionY, type, EnemyType == typeof(Goblin) ? 'G' : 'M' , 1, 10);
             }
             else if (type == Tile.TileType.Hero)
             {
@@ -79,10 +79,6 @@ namespace POETask2
             else if (type == Tile.TileType.Gold)
             {
                 return new Gold(positionX, positionY);
-            }
-            else if (type == Tile.TileType.Enemy)
-            {
-                return (Enemy)Activator.CreateInstance(EnemyType, positionX, positionY, type, EnemyType == typeof(Leader) ? 'L' : 2, 20);
             }
 
             return new Hero(positionX, positionY, Tile.TileType.Hero, 'H', 20, 20);
@@ -116,6 +112,12 @@ namespace POETask2
             for (int i = 0; i < AmtEnemy; i++)
             {
                 enemies[i] = (Mage)Create(Tile.TileType.Enemy, typeof(Mage));
+                map[enemies[i].GetX(), enemies[i].GetY()] = enemies[i];
+            }
+
+            for (int i = 0; i < 1; i++)
+            {
+                enemies[i] = (Leader)Create(Tile.TileType.Enemy, typeof(Leader));
                 map[enemies[i].GetX(), enemies[i].GetY()] = enemies[i];
             }
 
@@ -306,7 +308,7 @@ namespace POETask2
                         }
                 }
 
-                if (map[x, y] is Goblin || map[x, y] is Obstacle || map[x, y] is Mage)
+                if (map[x, y] is Goblin || map[x, y] is Obstacle || map[x, y] is Mage || enemies[i] is Mage)
                 {
                     canMove = false;
                     return;

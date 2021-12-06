@@ -14,8 +14,6 @@ namespace POETask2
     {
         GameEngine engine;
 
-
-
         public void UpdateAttackLog()
         {
             attackLog_RTB.Text = "some stuff";
@@ -48,42 +46,62 @@ namespace POETask2
 
         private void btnRight_Click_1(object sender, EventArgs e)
         {
+            Random r = new Random();
+            int enemyMove = r.Next(1, 4);
+
+            Character.MovementEnum somethingElse = (Character.MovementEnum)enemyMove;
+
             engine.GetMap().MoveHero(Character.MovementEnum.Right);
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
 
-            engine.GetMap().MoveEnemy(Character.MovementEnum.Right);
+            engine.GetMap().MoveEnemy(somethingElse);
         }
 
         private void btnUp_Click_1(object sender, EventArgs e)
         {
+            Random r = new Random();
+            int enemyMove = r.Next(1, 4);
+
+            Character.MovementEnum somethingElse = (Character.MovementEnum)enemyMove;
+
             engine.GetMap().MoveHero(Character.MovementEnum.Up);
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
 
-            engine.GetMap().MoveEnemy(Character.MovementEnum.Up);
+            engine.GetMap().MoveEnemy(somethingElse);
         }
 
         private void btnLeft_Click_1(object sender, EventArgs e)
         {
+            Random r = new Random();
+            int enemyMove = r.Next(1, 4);
+
+            Character.MovementEnum somethingElse = (Character.MovementEnum)enemyMove;
+
             engine.GetMap().MoveHero(Character.MovementEnum.Left);
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
 
-            engine.GetMap().MoveEnemy(Character.MovementEnum.Left);
+            engine.GetMap().MoveEnemy(somethingElse);
         }
 
         private void btnDown_Click_1(object sender, EventArgs e)
         {
+            Random r = new Random();
+            int enemyMove = r.Next(1, 4);
+
+            Character.MovementEnum somethingElse = (Character.MovementEnum)enemyMove;
+
             engine.GetMap().MoveHero(Character.MovementEnum.Down);
             lblMap.Text = engine.ToString();
 
             goldAmount_Label.Text = Map.goldCollected.ToString();
 
-            engine.GetMap().MoveEnemy(Character.MovementEnum.Down);
+            engine.GetMap().MoveEnemy(somethingElse);
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)

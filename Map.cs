@@ -161,7 +161,7 @@ namespace POETask2
                     }
             }
 
-            if (map[x, y] is Goblin || map[x, y] is Obstacle || map[x,y] is Mage)
+            if (map[x, y] is Goblin || map[x, y] is Obstacle || map[x,y] is Mage || map[x,y] is Leader)
             {
                 canMove = false;
                 return;

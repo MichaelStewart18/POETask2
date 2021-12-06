@@ -13,6 +13,7 @@ namespace POETask2
         public Hero playerCharacter;
         public Enemy[] enemies;
         public Gold gold;
+        public MeleeWeapon meleeWeapon;
         private int mapHeight;
         private int mapWidth;
         private int MinHeight;
@@ -29,6 +30,8 @@ namespace POETask2
         private static int goblinAmt = goblinAmount.Next(1, enemyAmount);
         private static Random mageAmount = new Random();
         private static int mageAmt = mageAmount.Next(1, enemyAmount);
+        private static Random meleeWepaonAmount = new Random();
+        private static int meleeWeaponAmt = meleeWepaonAmount.Next(1, 5);
         private static Random goldAmount = new Random();
         private static int goldennAmt = goblinAmount.Next(1, 5);
         public static int goldCollected = 0;
@@ -80,6 +83,10 @@ namespace POETask2
             {
                 return new Gold(positionX, positionY);
             }
+            /*else if (type == Tile.TileType.Weapon)
+            {
+                return new MeleeWeapon(positionX, positionY)
+            }*/
 
             return new Hero(positionX, positionY, Tile.TileType.Hero, 'H', 20, 20);
 
@@ -105,16 +112,17 @@ namespace POETask2
 
             for (int i = 0; i < AmtEnemy; i++)
             {
-                enemies[i] = (Goblin)Create(Tile.TileType.Enemy, typeof(Goblin));
+                enemies[i] = (Mage)Create(Tile.TileType.Enemy, typeof(Mage));
                 map[enemies[i].GetX(), enemies[i].GetY()] = enemies[i];
             }
 
             for (int i = 0; i < AmtEnemy; i++)
             {
-                enemies[i] = (Mage)Create(Tile.TileType.Enemy, typeof(Mage));
+                enemies[i] = (Goblin)Create(Tile.TileType.Enemy, typeof(Goblin));
                 map[enemies[i].GetX(), enemies[i].GetY()] = enemies[i];
             }
 
+           
             for (int i = 0; i < 1; i++)
             {
                 enemies[i] = (Leader)Create(Tile.TileType.Enemy, typeof(Leader));
@@ -126,6 +134,12 @@ namespace POETask2
                 gold = (Gold)Create(Tile.TileType.Gold);
                 map[gold.GetX(), gold.GetY()] = gold;
             }
+
+            /*for (int i = 0; i < meleeWeaponAmt + 1; i++)
+            {
+                meleeWeapon = (MeleeWeapon)Create(Tile.TileType.Weapon);
+                map[meleeWeapon.GetX(), meleeWeapon.GetY()] = meleeWeapon;
+            }*/
 
         }
 
